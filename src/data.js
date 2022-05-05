@@ -7,7 +7,7 @@ const data = {
       price: 33.78,
       currency: "USD",
       image: {
-        src: "https://picsum.photos/id/180/2400/1600",
+        src: "https://www.builderspace.com/wp-content/uploads/2021/06/high-rise-glass-building.jpg",
         alt: "Reinforced glass",
       },
       bestseller: true,

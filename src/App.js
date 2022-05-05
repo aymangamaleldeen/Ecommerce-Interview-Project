@@ -1,8 +1,23 @@
+import Header from "./components/Layout/Header"
+import FeaturedProduct from "./components/Layout/FeaturedProduct"
+import Products from "./components/Products/Products"
+import AsideFilter from "./components/Layout/AsideFilter"
+import { CartContextProvider } from "./Store/CartContextProvider";
+
+
+
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <CartContextProvider>
+      {/* {isVisible && <Cart onhide={hideCartHandler} />} */}
+      <Header  />
+      <FeaturedProduct/>
+      <AsideFilter/>
+      <main>
+        <Products />
+      </main>
+    </CartContextProvider>
   );
 }
 

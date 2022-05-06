@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{useContext} from "react";
 import styled from "styled-components";
+import CartContext from "../../Store/CartContextProvider";
 
 const Container = styled.li`
   flex: 1;
@@ -54,12 +55,14 @@ const CartButton = styled.button`
 
 
 const ProductItem = ({ product }) => {
+  const ctx = useContext(CartContext);
+
   return (
     <Container>
       <Wrapper>
         <ImageWrapper>
           <Image src={product.image.src} alt={product.image.alt} />
-          <CartButton> ADD TO CART</CartButton>
+          <CartButton onClick={()=>ctx.addItem(product)}> ADD TO CART</CartButton>
         </ImageWrapper>
         <ParagraphContainer> {product.category}</ParagraphContainer>
         <ProductName>{product.name} </ProductName>

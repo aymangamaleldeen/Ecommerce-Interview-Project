@@ -5,7 +5,12 @@ import styled from "styled-components";
 import AsideFilter from "../Layout/AsideFilter";
 import Pagination from "./Pagination";
 
-const Container = styled.ul`
+
+const Container = styled.div`
+
+`;
+
+const Wrapper = styled.ul`
   /* display:flex;
 flex-wrap:wrap;
 justify-content: space-between;
@@ -38,10 +43,9 @@ const Products = () => {
   }, [products]);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(6);
 
-  const indexOfLastProduct = currentPage * itemsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - itemsPerPage;
+  const indexOfLastProduct = currentPage * 6;
+  const indexOfFirstProduct = indexOfLastProduct - 6;
   const currentProducts = productsItems.slice(
     indexOfFirstProduct,
     indexOfLastProduct
@@ -53,13 +57,13 @@ const Products = () => {
 
   return (
     <Container>
-      <AsideFilter />
-      {currentProducts.map((product) => (
-        <ProductItem key={product.id} product={product} />
-      ))}
+      <Wrapper>
+        <AsideFilter />
+        {currentProducts.map((product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}
+      </Wrapper>
       <Pagination
-        itemsPerPage={itemsPerPage}
-        totalProducts={productsItems.length}
         paginate={paginate}
       />
     </Container>

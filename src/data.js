@@ -35,7 +35,7 @@ const data = {
       price: 120.21,
       currency: "USD",
       image: {
-        src: "https://thumbs.dreamstime.com/b/profile-sheets-metal-isolated-white-213099475.jpg",
+        src: "https://thumbs.dreamstime.com/b/steel-wall-silver-wave-structure-background-texture-59701977.jpg",
         alt: "wave steel",
       },
       bestseller: false,
@@ -44,7 +44,7 @@ const data = {
     },
     {
       id: "4",
-      name: "Shape",
+      name: "gold",
       category: "steel",
       price: 101,
       currency: "USD",
@@ -59,12 +59,12 @@ const data = {
     {
       id: "5",
       name: "Shape",
-      category: "steel",
+      category: "wood",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
-        alt: "Shape steel",
+        src: "https://img.freepik.com/free-photo/overhead-wooden-planks-background-with-copy-space_24972-537.jpg?w=2000",
+        alt: "Shape wood",
       },
       bestseller: false,
       featured: false,
@@ -72,13 +72,13 @@ const data = {
     },
     {
       id: "6",
-      name: "Shape",
-      category: "steel",
+      name: "pastel",
+      category: "brick",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
-        alt: "Shape steel",
+        src: "https://images.unsplash.com/photo-1495578942200-c5f5d2137def?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+        alt: "pastel brick",
       },
       bestseller: false,
       featured: false,
@@ -87,11 +87,11 @@ const data = {
     {
       id: "7",
       name: "Shape",
-      category: "steel",
+      category: "concrete",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/concrete-wall-royalty-free-image-1572896179.jpg",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -101,11 +101,11 @@ const data = {
     {
       id: "8",
       name: "Shape",
-      category: "steel",
+      category: "wood",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkLh-dINll0_NtaRvIoFPowA1LFT9Rdx5Bl-ku0XmyOLY66UNmTTW34_HKHFTIjdt16bA&usqp=CAU",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -129,11 +129,11 @@ const data = {
     {
       id: "10",
       name: "Shape",
-      category: "steel",
+      category: "brick",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg6snV_Bz-QNjN931T_9shNWuJy3cLuySZoQ&usqp=CAU",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -343,7 +343,7 @@ const data = {
       price: 105,
       currency: "USD",
       image: {
-        src: "https://polser.com/media/k2/items/cache/cam-takviyeli-levhalar-ctp_5bbe7bb9cb642_XL.jpg",
+        src: "https://smile-plastics.com/wp-content/uploads/2021/09/custom-materials-by-smile-plastics-1-1-scaled.jpg",
         alt: "Recycled Plastic",
       },
       bestseller: false,

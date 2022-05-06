@@ -36,6 +36,7 @@ const ParagraphContainer = styled.p`
 const ProductName = styled.h3`
   margin: 0;
   font-size: 1.6rem;
+  text-transform: capitalize;
 `;
 const CartButton = styled.button`
   position: absolute;

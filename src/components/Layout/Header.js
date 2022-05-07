@@ -22,6 +22,10 @@ const Image = styled.header`
   height: 25rem;
   z-index: 0;
   overflow: hidden;
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(-5deg) translateY(-4rem) translateX(-1rem); */
 `;
 
 

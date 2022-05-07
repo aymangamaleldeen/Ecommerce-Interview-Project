@@ -40,9 +40,6 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 3%;
   object-fit: cover;
 
@@ -56,6 +53,37 @@ const FeaturedFlag = styled.div`
   color: black;
   font-size: 2rem;
 `;
+const DetailWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  border: 3px solid green;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+
+  }
+`;
+const LeftDetails = styled.div`
+  margin-right: 10%;
+  order: 0;
+
+  @media (max-width: 750px) {
+    order:2;
+  }
+`;
+const RightDetails = styled.div`
+  order: 1;
+`;
+const ImageGroup = styled.div`
+display: flex;
+
+`;
+const SmallImgWrapper = styled.div`
+width: 117px;
+height: 147px;
+`;
 
 const FeaturedProduct = () => {
   const { products } = data;
@@ -66,15 +94,64 @@ const FeaturedProduct = () => {
     <Container>
       <TitleWrapper>
         <Title> {featuredproduct.name}</Title>
-        <AddTOCartButton onClick={()=>ctx.addItem(featuredproduct)}> ADD TO CART</AddTOCartButton>
+        <AddTOCartButton onClick={() => ctx.addItem(featuredproduct)}>
+          ADD TO CART
+        </AddTOCartButton>
       </TitleWrapper>
       <ImageWrapper>
         <Image
           src={featuredproduct.image.src}
           alt={featuredproduct.image.alt}
         />
-    <FeaturedFlag> Featured </FeaturedFlag>
+        <FeaturedFlag> Featured </FeaturedFlag>
       </ImageWrapper>
+      <DetailWrapper>
+        <LeftDetails>
+          <h3> Materials people also use</h3>
+          <ImageGroup>
+            <SmallImgWrapper>
+              <Image
+                src={featuredproduct.details.recommendations[0].src}
+                alt={featuredproduct.details.recommendations[0].alt}
+              />
+            </SmallImgWrapper>
+            <SmallImgWrapper>
+              <Image
+                src={featuredproduct.details.recommendations[1].src}
+                alt={featuredproduct.details.recommendations[1].alt}
+              />
+            </SmallImgWrapper>
+            <SmallImgWrapper>
+              <Image
+                src={featuredproduct.details.recommendations[2].src}
+                alt={featuredproduct.details.recommendations[2].alt}
+              />
+            </SmallImgWrapper>
+          </ImageGroup>
+          <div>
+            <h3> Details</h3>
+            <p> Weight:{featuredproduct.details.weight} g/m2</p>
+            <p> Thickness:{featuredproduct.details.thickness} cm</p>
+          </div>
+        </LeftDetails>
+        <RightDetails>
+          <h3> About Recycled Plastic</h3>
+          <h4>{featuredproduct.category}</h4>
+          <p>
+            Plastic recycling is the reprocessing of plastic waste into new and
+            useful products. When performed correctly, this can reduce
+            dependence on landfill, conserve resources and protect the
+            environment from plastic pollution and greenhouse gas emissions.
+            Although recycling rates are increasing, they lag behind those of
+            other recoverable materials, such as aluminum, glass and paper. The
+            global recycling rate in 2015 was 19.5%, while 25.5% was incinerated
+            and the remaining 55% disposed of to landfill. Since the beginning
+            of plastic production in the 20th century, until 2015, the world has
+            produced some 6.3 billion tonnes of plastic waste, only 9% of which
+            has been recycled, and only ~1% has been recycled more than once.[6]
+          </p>
+        </RightDetails>
+      </DetailWrapper>
     </Container>
   );
 };

@@ -3,11 +3,15 @@ import ProductItem from "./ProductItem";
 import data from "../../data";
 import styled from "styled-components";
 import AsideFilter from "../Layout/AsideFilter";
+import Sort from "../Layout/Sort";
 import Pagination from "./Pagination";
 
 const Container = styled.div`
   width: 100%;
   border: 4px solid blue;
+`;
+const SortingWrapper = styled.div`
+
 `;
 
 const Wrapper = styled.ul`
@@ -101,6 +105,9 @@ const Products = () => {
 
   return (
     <Container>
+      <SortingWrapper>
+<Sort/>
+      </SortingWrapper>
       <Wrapper>
         <AsideFilter />
         {currentProducts.map((product) => (

@@ -170,12 +170,12 @@ const data = {
     },
     {
       id: "13",
-      name: "Shape",
-      category: "steel",
-      price: 101,
+      name: "surface",
+      category: "copper",
+      price: 500,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://www.rmit.edu.au/content/dam/rmit/rmit-images/news/2021/dec/copper-antibacterial/GettyImages-869269460.jpg",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -184,12 +184,12 @@ const data = {
     },
     {
       id: "14",
-      name: "Shape",
-      category: "steel",
-      price: 101,
+      name: "fiber",
+      category: "carbon fiber",
+      price: 60,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://image.architonic.com/img_pro2-4/116/6568/carbon-fiber-anthracite-car-9001-b.jpg",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -354,7 +354,7 @@ const data = {
         description: "",
         recommendations: [
           {
-            src: "https://image.shutterstock.com/image-photo/wood-texture-background-planks-260nw-529326181.jpg",
+            src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/concrete-wall-royalty-free-image-1572896179.jpg",
             alt: "wood",
           },
           {

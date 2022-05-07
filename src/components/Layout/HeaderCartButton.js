@@ -21,8 +21,10 @@ const [showCart , setShowCart] =useState(false)
   const ctx = useContext(CartContext);
   const numberOfCartItems =ctx.cartItems.length ;
 
+
   const clickHandler =()=>{
     setShowCart(!showCart);
+    
   }
 
   const [isBump] = useState(false);
@@ -53,7 +55,7 @@ const [showCart , setShowCart] =useState(false)
         <span className={classes.badge}> {numberOfCartItems} </span>
       </button>
       <CartWrapper>
-       {showCart && <Cart />}
+        {showCart && <Cart onHide={() => setShowCart(!showCart)} />}
       </CartWrapper>
     </Container>
   );

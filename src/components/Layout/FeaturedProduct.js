@@ -33,7 +33,7 @@ const AddTOCartButton = styled.button`
 const Title = styled.h2``;
 
 const ImageWrapper = styled.div`
-  width: 1290px;
+  max-width: 1290px;
   height: 553px;
   position: relative;
 `;
@@ -45,6 +45,7 @@ const Image = styled.img`
   align-items: center;
   padding: 0 3%;
   object-fit: cover;
+
 `;
 const FeaturedFlag = styled.div`
   position: absolute;

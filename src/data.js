@@ -44,9 +44,9 @@ const data = {
     },
     {
       id: "4",
-      name: "gold",
+      name: "gold steel",
       category: "steel",
-      price: 101,
+      price: 105,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -60,7 +60,7 @@ const data = {
       id: "5",
       name: "Shape",
       category: "wood",
-      price: 101,
+      price: 210,
       currency: "USD",
       image: {
         src: "https://img.freepik.com/free-photo/overhead-wooden-planks-background-with-copy-space_24972-537.jpg?w=2000",
@@ -74,13 +74,13 @@ const data = {
       id: "6",
       name: "pastel",
       category: "brick",
-      price: 101,
+      price: 80,
       currency: "USD",
       image: {
         src: "https://images.unsplash.com/photo-1495578942200-c5f5d2137def?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
         alt: "pastel brick",
       },
-      bestseller: false,
+      bestseller: true,
       featured: false,
       details: null,
     },
@@ -142,12 +142,12 @@ const data = {
     },
     {
       id: "11",
-      name: "Shape",
-      category: "steel",
+      name: "red brick",
+      category: "brick",
       price: 101,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBk5VsvsdYh6s6ZYrxsnSLSMy7jtabzYcp2Q&usqp=CAU",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -343,7 +343,7 @@ const data = {
       price: 105,
       currency: "USD",
       image: {
-        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZgkWA7ItSH89jmsuB_MoKUkItaxHFt8MIw&usqp=CAU",
+        src: "https://previews.123rf.com/images/tinnko/tinnko1203/tinnko120300032/12886631-plastic-building-blocks-background-colorful-children-s-toys.jpg",
         alt: "Recycled Plastic",
       },
       bestseller: false,

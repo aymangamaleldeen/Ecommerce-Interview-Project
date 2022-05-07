@@ -15,8 +15,6 @@
   z-index: 10;
 }
 
-
-
 .main-image {
   width: 110%;
   height: 25rem;
@@ -31,8 +29,5 @@
   transform: rotate(-5deg) translateY(-4rem) translateX(-1rem);
 }
 
-@media (max-width:600px){
-  .header {
-  justify-content: space-between;
-}
+
 }

@@ -46,7 +46,6 @@ export const CartContextProvider = (props) => {
     setCartItems([]);
   };
   const deleteHandler = (product) => {
-  
     setCartItems((cartItems) => cartItems.filter(item => item.id !==product.id))
   };
 

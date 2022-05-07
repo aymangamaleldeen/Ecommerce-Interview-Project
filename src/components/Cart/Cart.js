@@ -9,12 +9,12 @@ const Container = styled.div`
   width: 443px;
   height: 279px;
   top: 109px;
-  right: 10px;
+  right: 40px;
   border: 4px solid #e4e4e4;
   background: #ffffff;
   overflow: auto;
   display: flex;
-  flex-direction: column;
+flex-direction: column;
   align-items: center;
 
   @media (max-width: 500px) {
@@ -34,10 +34,14 @@ const Button = styled.button`
   letter-spacing: 0.07em;
   color: #000000;
 
+  @media (max-width: 500px) {
+    width: 200px;
+  }
 
-  &:hover , &:active{
+  &:hover,
+  &:active {
     background-color: #000000;
-    color:white;
+    color: white;
   }
 `;
 

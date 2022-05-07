@@ -13,15 +13,14 @@ const ListItem = styled.li`
   position: relative;
 `;
 const CancelButton = styled.button`
-position:absolute;
-top:0;
-right:0;
-font-size: 1.4rem;
-cursor: pointer;
-background: white;
-font-weight: bold;
-border: none;
-
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: white;
+  font-weight: bold;
+  border: none;
 `;
 const ProductTitle = styled.h2`
   text-transform: capitalize;
@@ -32,6 +31,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 `;
 const Price = styled.span`
   font-weight: bold;
@@ -76,7 +80,7 @@ const ImageWrapper = styled.div`
   width: 168px;
   height: 80%;
 
-  border: 1px solid green;
+
 `;
 const Image = styled.img`
   width: 100%;
@@ -90,7 +94,7 @@ const CartItem = ({ item }) => {
   return (
     <ListItem>
       <div>
-        <CancelButton onClick={()=>ctx.deleteItems(item)}> x </CancelButton>
+        <CancelButton onClick={() => ctx.deleteItems(item)}> x </CancelButton>
         <ProductTitle>{item.name}</ProductTitle>
         <Wrapper>
           <Price>{price}</Price>

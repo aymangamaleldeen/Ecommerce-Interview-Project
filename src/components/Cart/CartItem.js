@@ -11,6 +11,7 @@ const ListItem = styled.li`
   padding: 1rem 0;
   margin: 1rem 0;
   position: relative;
+  padding:2%;
 `;
 const CancelButton = styled.button`
   position: absolute;
@@ -79,8 +80,6 @@ const Button = styled.span`
 const ImageWrapper = styled.div`
   width: 168px;
   height: 80%;
-
-
 `;
 const Image = styled.img`
   width: 100%;
@@ -100,13 +99,7 @@ const CartItem = ({ item }) => {
           <Price>{price}</Price>
           <Quantity>x{item.quantity}</Quantity>
           <WrapperButtons>
-            <Button
-              onClick={() => {
-                ctx.addItem(item);
-              }}
-            >
-              +
-            </Button>
+            <Button onClick={() => ctx.addItem(item)}>+</Button>
             <Button onClick={() => ctx.removeItem(item)}>−</Button>
           </WrapperButtons>
         </Wrapper>

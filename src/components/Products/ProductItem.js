@@ -1,16 +1,13 @@
-import React ,{useContext} from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import CartContext from "../../Store/CartContextProvider";
 
 const Container = styled.li`
   flex: 1;
   list-style: none;
-
 `;
 
 const Wrapper = styled.div`
-  margin: 30px 30px;
-
 `;
 const ImageWrapper = styled.div`
   position: relative;
@@ -22,11 +19,21 @@ const ImageWrapper = styled.div`
     bottom: 0px;
   }
 `;
+const BestSellerFlag = styled.div`
+  position: absolute;
+  top:0;
+  left:0;
+  width:120px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: white;
+  color: black;
+
+`;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
-
 `;
 const ParagraphContainer = styled.p`
   margin: 0;
@@ -51,19 +58,31 @@ const CartButton = styled.button`
   cursor: pointer;
   opacity: 0;
   transition: 0.25s;
+
+  &:hover,
+  &:active {
+    color: black;
+    background: white;
+  }
 `;
-
-
 
 const ProductItem = ({ product }) => {
   const ctx = useContext(CartContext);
+
+const clickHandler = ()=>{
+  ctx.addItem(product);
+}
+
 
   return (
     <Container>
       <Wrapper>
         <ImageWrapper>
           <Image src={product.image.src} alt={product.image.alt} />
-          <CartButton onClick={()=>ctx.addItem(product)}> ADD TO CART</CartButton>
+          {product.bestseller? <BestSellerFlag> Best Seller</BestSellerFlag>:""}
+          <CartButton onClick={clickHandler}>
+            ADD TO CART
+          </CartButton>
         </ImageWrapper>
         <ParagraphContainer> {product.category}</ParagraphContainer>
         <ProductName>{product.name} </ProductName>

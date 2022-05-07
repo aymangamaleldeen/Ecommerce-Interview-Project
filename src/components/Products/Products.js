@@ -5,20 +5,16 @@ import styled from "styled-components";
 import AsideFilter from "../Layout/AsideFilter";
 import Pagination from "./Pagination";
 
-
 const Container = styled.div`
-
+  width: 100%;
+  border: 4px solid blue;
 `;
 
 const Wrapper = styled.ul`
-  /* display:flex;
-flex-wrap:wrap;
-justify-content: space-between;
-align-content:space-between; */
-
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px 20px;
+  width: 100%;
 
   @media (min-width: 1100px) and (max-width: 1500px) {
     display: grid;
@@ -31,6 +27,8 @@ align-content:space-between; */
   @media (max-width: 734px) {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -43,9 +41,10 @@ const Products = () => {
   }, [products]);
 
   const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage, setProductsPerPage] = useState(6);
 
-  const indexOfLastProduct = currentPage * 6;
-  const indexOfFirstProduct = indexOfLastProduct - 6;
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = productsItems.slice(
     indexOfFirstProduct,
     indexOfLastProduct
@@ -63,9 +62,7 @@ const Products = () => {
           <ProductItem key={product.id} product={product} />
         ))}
       </Wrapper>
-      <Pagination
-        paginate={paginate}
-      />
+      <Pagination paginate={paginate} />
     </Container>
   );
 };

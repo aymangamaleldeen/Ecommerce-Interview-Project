@@ -343,7 +343,7 @@ const data = {
       price: 105,
       currency: "USD",
       image: {
-        src: "https://smile-plastics.com/wp-content/uploads/2021/09/custom-materials-by-smile-plastics-1-1-scaled.jpg",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZgkWA7ItSH89jmsuB_MoKUkItaxHFt8MIw&usqp=CAU",
         alt: "Recycled Plastic",
       },
       bestseller: false,

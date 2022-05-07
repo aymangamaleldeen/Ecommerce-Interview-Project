@@ -71,6 +71,7 @@ const ProductItem = ({ product }) => {
 
 const clickHandler = ()=>{
   ctx.addItem(product);
+  
 }
 
 

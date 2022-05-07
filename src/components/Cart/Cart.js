@@ -45,13 +45,14 @@ const Button = styled.button`
   }
 `;
 
-const Cart = ({ onHide }) => {
+const Cart = () => {
   const ctx = useContext(CartContext);
 
   const clickHandler = () => {
     ctx.clearItems();
-    onHide();
+    // onHide();
   };
+
   return (
     <Container>
       {ctx.cartItems.map((item) => (

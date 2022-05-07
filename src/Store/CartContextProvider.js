@@ -6,12 +6,16 @@ const CartContext = React.createContext({
   removeItem: () => {},
   clearItems: () => {},
   deleteItems: () => {},
+  isShown: false,
+  toggleCart: () => {},
 });
 
 export const CartContextProvider = (props) => {
   const [cartItems, setCartItems] = useState([]);
+  const [isShown, setIsShown] = useState(false);
 
   const addHandler = (product) => {
+    setIsShown(true);
     const exist = cartItems.find((item) => item.id === product.id);
 
     if (exist) {
@@ -44,9 +48,13 @@ export const CartContextProvider = (props) => {
   };
   const clearHandler = () => {
     setCartItems([]);
+       setIsShown(false);
   };
   const deleteHandler = (product) => {
     setCartItems((cartItems) => cartItems.filter(item => item.id !==product.id))
+  };
+  const toggleHandler = (product) => {
+  setIsShown(!isShown)
   };
 
   const contextValue = {
@@ -55,6 +63,8 @@ export const CartContextProvider = (props) => {
     removeItem: removeHandler,
     clearItems: clearHandler,
     deleteItems: deleteHandler,
+    isShown: isShown,
+    toggleCart: toggleHandler,
   };
 
   return (

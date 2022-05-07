@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Cart from "../Cart/Cart";
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../Store/CartContextProvider";
@@ -46,13 +46,11 @@ const Badge = styled.span`
 const CartWrapper = styled.div``;
 
 const HeaderCartButton = () => {
-  const [showCart, setShowCart] = useState(false);
-
   const ctx = useContext(CartContext);
   const numberOfCartItems = ctx.cartItems.length;
 
   const clickHandler = () => {
-    setShowCart(!showCart);
+    ctx.toggleCart();
   };
 
   return (
@@ -63,9 +61,7 @@ const HeaderCartButton = () => {
         </Icon>
         <Badge> {numberOfCartItems} </Badge>
       </Button>
-      <CartWrapper>
-        {showCart && <Cart onHide={() => setShowCart(!showCart)} />}
-      </CartWrapper>
+      <CartWrapper>{ctx.isShown && <Cart />}</CartWrapper>
     </Container>
   );
 };

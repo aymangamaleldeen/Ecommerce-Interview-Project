@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState , Fragment } from "react";
 import AsideFilter from "../Layout/AsideFilter";
 import ProductItem from "../Products/ProductItem";
 
 import styled from "styled-components";
-import { Fragment } from "react/cjs/react.production.min";
 
 const Wrapper = styled.ul`
   display: grid;
@@ -23,7 +22,6 @@ const Wrapper = styled.ul`
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     justify-items: center;
-
   }
 `;
 
@@ -47,26 +45,20 @@ const Sort = ({ currentProducts }) => {
   const [sortedProducts, setSortedProducts] = useState();
   const [sortType, setSortType] = useState();
 
-const changeHandler = (event)=>{
-  setSortType(event.target.value);
-  console.log("changeHandler", event.target.value);
-}
-
-console.log("component",sortType);
+  const changeHandler = (event) => {
+    setSortType(event.target.value);
+  };
 
   useEffect(() => {
-    console.log("effect",sortType)
-
     if (sortType === "price") {
       let copiedArr = [...currentProducts];
- copiedArr.sort((a, b) => a.price - b.price);
+      copiedArr.sort((a, b) => a.price - b.price);
+      setSortedProducts(copiedArr);
+    } else if (sortType === "Alphabetically") {
+      let copiedArr = [...currentProducts];
+      copiedArr.sort((a, b) => a.name.localeCompare(b.name));
       setSortedProducts(copiedArr);
     }
-    else if (sortType === "Alphabetically") {
-          let copiedArr = [...currentProducts];
-          copiedArr.sort((a, b) => a.name.localeCompare(b.name));
-      setSortedProducts(copiedArr);
-    } 
   }, [currentProducts, sortType]);
 
   return (
@@ -89,10 +81,10 @@ console.log("component",sortType);
       <Wrapper>
         {console.log(sortedProducts)}
         <AsideFilter />
-        {sortedProducts
-          && sortedProducts.map((product) => (
-              <ProductItem key={product.id} product={product} />
-            ))}
+        {sortedProducts &&
+          sortedProducts.map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
       </Wrapper>
     </Fragment>
   );

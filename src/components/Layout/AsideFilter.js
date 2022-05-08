@@ -6,7 +6,7 @@ const Container = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* border: 1px solid blue; */
+
   @media (max-width: 1099px) {
     display: none;
 
@@ -17,12 +17,12 @@ const FieldSet = styled.fieldset`
   flex-direction: column;
   border: none;
   margin-bottom: 35px;
-  /* border: 1px solid green; */
+
 `;
 const InputWrapper = styled.div`
   margin: 15px 0;
   font-size: 1.5rem;
-  /* border: 1px solid red; ; */
+
 `;
 
 const Legend = styled.legend`

@@ -10,8 +10,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  
-  border: 4px solid red;
 `;
 
 function App() {

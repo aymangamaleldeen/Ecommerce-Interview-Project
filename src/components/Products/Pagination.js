@@ -5,7 +5,6 @@ import styled from "styled-components";
 const Navigation = styled.nav`
   display: flex;
   justify-content: center;
-  border: 1px solid red;
 `;
 
 const List = styled.ul`

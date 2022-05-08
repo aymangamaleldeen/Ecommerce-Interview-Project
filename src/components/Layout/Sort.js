@@ -22,8 +22,8 @@ const Wrapper = styled.ul`
   @media (max-width: 734px) {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+
   }
 `;
 
@@ -31,7 +31,6 @@ const SortContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  border: 1px solid blue;
   margin-right: 10%;
   margin-bottom: 2%;
   font-size: 1.4rem;
@@ -45,7 +44,7 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const Sort = ({ currentProducts }) => {
-  const [sortedProducts, setSortedProducts] = useState(currentProducts);
+  const [sortedProducts, setSortedProducts] = useState();
   const [sortType, setSortType] = useState();
 
 const changeHandler = (event)=>{

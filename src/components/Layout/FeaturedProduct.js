@@ -6,7 +6,6 @@ import CartContext from "../../Store/CartContextProvider";
 const Container = styled.div`
 margin-top: 6rem;
 width: 97%;
-border:3px solid maroon;
 
 `;
 
@@ -33,7 +32,7 @@ const AddTOCartButton = styled.button`
 const Title = styled.h2``;
 
 const ImageWrapper = styled.div`
-  max-width: 1290px;
+  max-width: 1850px;
   height: 553px;
   position: relative;
 `;
@@ -56,9 +55,7 @@ const FeaturedFlag = styled.div`
 const DetailWrapper = styled.div`
   display: flex;
   flex-direction: row;
-
   justify-content: space-between;
-  border: 3px solid green;
 
   @media (max-width: 750px) {
     flex-direction: column;

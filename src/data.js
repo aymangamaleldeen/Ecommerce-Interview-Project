@@ -86,9 +86,9 @@ const data = {
     },
     {
       id: "7",
-      name: "Shape",
+      name: "block",
       category: "concrete",
-      price: 101,
+      price: 120,
       currency: "USD",
       image: {
         src: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/concrete-wall-royalty-free-image-1572896179.jpg",
@@ -100,9 +100,9 @@ const data = {
     },
     {
       id: "8",
-      name: "Shape",
+      name: "light wood",
       category: "wood",
-      price: 101,
+      price: 80,
       currency: "USD",
       image: {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkLh-dINll0_NtaRvIoFPowA1LFT9Rdx5Bl-ku0XmyOLY66UNmTTW34_HKHFTIjdt16bA&usqp=CAU",
@@ -116,7 +116,7 @@ const data = {
       id: "9",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 130,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -130,7 +130,7 @@ const data = {
       id: "10",
       name: "Shape",
       category: "brick",
-      price: 101,
+      price: 140,
       currency: "USD",
       image: {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg6snV_Bz-QNjN931T_9shNWuJy3cLuySZoQ&usqp=CAU",
@@ -144,7 +144,7 @@ const data = {
       id: "11",
       name: "red brick",
       category: "brick",
-      price: 101,
+      price: 150,
       currency: "USD",
       image: {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBk5VsvsdYh6s6ZYrxsnSLSMy7jtabzYcp2Q&usqp=CAU",
@@ -175,7 +175,7 @@ const data = {
       price: 500,
       currency: "USD",
       image: {
-        src: "https://www.rmit.edu.au/content/dam/rmit/rmit-images/news/2021/dec/copper-antibacterial/GettyImages-869269460.jpg",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkw7C4BApeCdSZsOzrj1bw26CSstN36d4RvEAs7Zz4x-l7yuWyVR1AAXAO8BCFoW8WVc&usqp=CAU",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -200,7 +200,7 @@ const data = {
       id: "15",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 90,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -212,12 +212,12 @@ const data = {
     },
     {
       id: "16",
-      name: "Shape",
-      category: "steel",
-      price: 101,
+      name: "mirror",
+      category: "glass",
+      price: 127,
       currency: "USD",
       image: {
-        src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
+        src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAj4cARbSVOpswliHsf5XL7nTVETWLpwCf7g&usqp=CAU",
         alt: "Shape steel",
       },
       bestseller: false,
@@ -228,7 +228,7 @@ const data = {
       id: "17",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 105,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -242,7 +242,7 @@ const data = {
       id: "18",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 120,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -256,7 +256,7 @@ const data = {
       id: "19",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 146,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -270,7 +270,7 @@ const data = {
       id: "20",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 115,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -284,7 +284,7 @@ const data = {
       id: "21",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 125,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -298,7 +298,7 @@ const data = {
       id: "22",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 155,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -312,7 +312,7 @@ const data = {
       id: "23",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 135,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",
@@ -326,7 +326,7 @@ const data = {
       id: "24",
       name: "Shape",
       category: "steel",
-      price: 101,
+      price: 145,
       currency: "USD",
       image: {
         src: "https://marvel-b1-cdn.bc0a.com/f00000000211153/www.kloecknermetals.com/wp-content/uploads/2021/01/structural-steel-shapes.png",

@@ -73,20 +73,20 @@ const AsideFilter = () => {
       <FieldSet>
         <Legend> Price Range </Legend>
         <InputWrapper>
-          <Input name="material" id="wood" type="radio" />
-          <label htmlFor="wood"> Lower than $20 </label>
+          <Input name="price" id="firstPrice" type="radio" />
+          <label htmlFor="firstPrice"> Lower than $20 </label>
         </InputWrapper>
         <InputWrapper>
-          <Input name="material" id="concrete" type="radio" />
-          <label htmlFor="concrete"> $20 - $100 </label>
+          <Input name="price" id="secondPrice" type="radio" />
+          <label htmlFor="secondPrice"> $20 - $100 </label>
         </InputWrapper>
         <InputWrapper>
-          <Input name="material" id="brick" type="radio" />
-          <label htmlFor="brick"> $100 - $200 </label>
+          <Input name="price" id="thirdPrice" type="radio" />
+          <label htmlFor="thirdPrice"> $100 - $200 </label>
         </InputWrapper>
         <InputWrapper>
-          <Input name="material" id="glass" type="radio" />
-          <label htmlFor="glass"> More than $200 </label>
+          <Input name="price" id="fourthPrice" type="radio" />
+          <label htmlFor="fourthPrice"> More than $200 </label>
         </InputWrapper>
       </FieldSet>
     </Container>

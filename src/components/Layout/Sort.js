@@ -42,7 +42,7 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const Sort = ({ currentProducts }) => {
-  const [sortedProducts, setSortedProducts] = useState();
+  const [sortedProducts, setSortedProducts] = useState(currentProducts);
   const [sortType, setSortType] = useState();
 
   const changeHandler = (event) => {
@@ -58,6 +58,8 @@ const Sort = ({ currentProducts }) => {
       let copiedArr = [...currentProducts];
       copiedArr.sort((a, b) => a.name.localeCompare(b.name));
       setSortedProducts(copiedArr);
+    }else{
+       setSortedProducts(currentProducts);
     }
   }, [currentProducts, sortType]);
 
@@ -81,8 +83,7 @@ const Sort = ({ currentProducts }) => {
       <Wrapper>
         {console.log(sortedProducts)}
         <AsideFilter />
-        {sortedProducts &&
-          sortedProducts.map((product) => (
+        {sortedProducts.map((product) => (
             <ProductItem key={product.id} product={product} />
           ))}
       </Wrapper>

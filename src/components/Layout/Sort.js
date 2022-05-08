@@ -58,14 +58,14 @@ console.log("component",sortType);
     console.log("effect",sortType)
 
     if (sortType === "price") {
-      console.log("inside if check")
-      setSortedProducts(currentProducts.sort((a, b) => a.price - b.price));
+      let copiedArr = [...currentProducts];
+ copiedArr.sort((a, b) => a.price - b.price);
+      setSortedProducts(copiedArr);
     }
     else if (sortType === "Alphabetically") {
-       console.log("inside second if check");
-      setSortedProducts(
-        currentProducts.sort((a, b) => a.name.localeCompare(b.name))
-      );
+          let copiedArr = [...currentProducts];
+          copiedArr.sort((a, b) => a.name.localeCompare(b.name));
+      setSortedProducts(copiedArr);
     } 
   }, [currentProducts, sortType]);
 
@@ -90,11 +90,9 @@ console.log("component",sortType);
         {console.log(sortedProducts)}
         <AsideFilter />
         {sortedProducts
-          ? sortedProducts.map((product) => (
+          && sortedProducts.map((product) => (
               <ProductItem key={product.id} product={product} />
-            ))
-          : currentProducts.map((product) => (
-              <ProductItem key={product.id} product={product} />))}
+            ))}
       </Wrapper>
     </Fragment>
   );

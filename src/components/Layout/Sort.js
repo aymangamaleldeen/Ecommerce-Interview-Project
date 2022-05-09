@@ -1,8 +1,9 @@
-import React, { useEffect, useState , Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import AsideFilter from "../Layout/AsideFilter";
 import ProductItem from "../Products/ProductItem";
 
 import styled from "styled-components";
+import { SwapVert } from "@material-ui/icons";
 
 const Wrapper = styled.ul`
   display: grid;
@@ -48,6 +49,18 @@ const Sort = ({ currentProducts }) => {
   const changeHandler = (event) => {
     setSortType(event.target.value);
   };
+  const clickHandler = () => {
+    if (sortType === "price") {
+      let copiedArr = [...currentProducts];
+      copiedArr.sort((a, b) => a.price - b.price);
+      setSortedProducts(copiedArr.reverse());
+    }
+    if (sortType === "Alphabetically") {
+      let copiedArr = [...currentProducts];
+      copiedArr.sort((a, b) => a.name.localeCompare(b.name));
+      setSortedProducts(copiedArr.reverse());
+    }
+  };
 
   useEffect(() => {
     if (sortType === "price") {
@@ -58,14 +71,18 @@ const Sort = ({ currentProducts }) => {
       let copiedArr = [...currentProducts];
       copiedArr.sort((a, b) => a.name.localeCompare(b.name));
       setSortedProducts(copiedArr);
-    }else{
-       setSortedProducts(currentProducts);
+    } else {
+      setSortedProducts(currentProducts);
     }
   }, [currentProducts, sortType]);
 
   return (
     <Fragment>
       <SortContainer>
+        <SwapVert
+          onClick={clickHandler}
+          style={{ marginRight: "12px", marginTop: "5px", cursor: "pointer" }}
+        />
         <Label htmlFor="products"> Sort By</Label>
         <Select
           name="sorting"
@@ -81,11 +98,10 @@ const Sort = ({ currentProducts }) => {
         </Select>
       </SortContainer>
       <Wrapper>
-        {console.log(sortedProducts)}
         <AsideFilter />
         {sortedProducts.map((product) => (
-            <ProductItem key={product.id} product={product} />
-          ))}
+          <ProductItem key={product.id} product={product} />
+        ))}
       </Wrapper>
     </Fragment>
   );
